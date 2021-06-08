@@ -1,0 +1,43 @@
+api service v1:
+- production:
+    url: https://fancyservice.com/api/v1
+    port: 8080
+    auth: ssl
+- staging:
+    url: https://fancyservice.com/staging/api/v1
+    port: 8080
+    auth: sasl
+- local:
+    url: 127.0.0.1/api/v1
+    port: 8084
+    auth: basic
+- local docker:
+    url: 127.0.0.1
+    port: 8085
+    auth: false
+api service v2:
+- production:
+    url: https://fancyservice.com/api/v2
+    port: 8081
+    auth: ssl
+- staging:
+    url: https://fancyservice.com/staging/api/v2
+    port: 8081
+    auth: sasl
+- local:
+    url: http:/localhost/api/v2
+    port: 8085
+    auth:
+      type: sasl
+      username: ENVVAR_USER_NAME
+      password: ENVVAR_USER_PASSWORD
+database service:
+- provider 1:
+    url: pg-12e12ac-project-7747.cloud.com
+    port: 26865
+    auth: sasl
+- provider 2:
+    key: value
+proxy:
+  url: https:/intranet.proxy.com
+  port: 2345

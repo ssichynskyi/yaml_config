@@ -1,0 +1,29 @@
+---
+api service v1:
+  - production:
+      url: 'https://fancyservice.com/api/v1'
+      port: 8080
+      auth: ssl
+  - staging:
+      url: 'https://fancyservice.com/staging/api/v1'
+      port: 8080
+      auth: sasl
+  - local:
+      url: '192.168.192.168/api/v1'
+      port:
+
+api service v2:
+  - production:
+      url: 'https://fancyservice.com/api/v2'
+      port: 8081
+      auth: ssl
+  - staging:
+      url: 'https://fancyservice.com/staging/api/v2'
+      port: 8081
+      auth: sasl
+
+database service:
+  provider 1:
+    url: 'pg-12e12ac-project-7747.cloud.com'
+    port: 26865
+    auth: sasl
